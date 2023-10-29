@@ -1,0 +1,822 @@
+
+
+
+html , body{
+    width: 100%;
+    height: 100%;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    background: url(/images/Untitled\ design\ \(10\).png);
+    background-position: center;
+    background-size: cover;
+    
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #nav {
+      /* background-color: #9b9898; */
+      width: 100%;
+      display: flex;
+      
+      overflow: auto;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2px 2px;
+    }
+    
+    #nav img {
+    height: 6rem;
+    width: 6rem;
+    margin-left:1rem ;
+    
+    filter: invert(1);
+    }
+    
+    #nav a {
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    pointer-events: all;
+    }
+    
+    #menu-toggle {
+    color: #ffffff;
+    display: none;
+    cursor: pointer;
+    /* margin-right: 1rem; */
+    font-size: 1rem;
+    background: none;
+    border: none;
+    }
+    
+    #nleft {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    }
+    
+    
+    @media (max-width: 600px) {
+    #nleft {
+    display: none;
+    }
+    
+    
+    
+    #menu-toggle {
+    display: block;
+    }
+    }
+    
+    
+    
+    
+    .map-container {
+      display: none;
+    }
+    
+    .location-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 10px;
+     
+     
+    }
+    .label h4{
+      font-family: 'IBM Plex Mono','Source Code Pro','Poppins';
+      font-size: 1rem;
+      font-weight: 800;
+      margin: 0.3rem;
+      
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      /* padding: 5px 5px; */
+    }
+    .main{
+      margin: 10vh 0vh;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    .about{
+      margin: 3vh 0vh;
+      
+      background-color: #fecea8;
+    }
+    .about h4{
+      padding: 2vh;
+      font-family:'Courier New';
+      font-weight: 900;
+      font-size: large;
+      color: #000000;
+    }
+    
+    
+    .heritage{
+    display: none;
+    margin: 3rem 0rem;
+    
+    }
+    
+    .museum{
+      display: none;
+      margin: 3rem 0rem;
+      }
+    
+    .amuse{
+    display: none;
+    margin: 3rem 0rem;
+    }
+    
+    .malls{
+    display: none;
+    margin: 3rem 0rem;
+    }
+    
+    .parks{
+    display: none;
+    margin: 3rem 0rem;
+    }
+    
+    .localM{
+    display: none;
+    margin: 3rem 0rem;
+    }
+    
+    .spooky{
+    display: none;
+    margin: 3rem 0rem;
+    }
+    
+    .restaurant{
+    display: none;
+    margin: 3rem 0rem;
+    }
+    
+    .location-card {
+      width: 40vh;
+      height: 50vh;
+     
+      background-color: rgb(231, 184, 138);
+      overflow: hidden;
+    }
+    
+    
+    
+    
+    
+    
+    .card-content {
+      display: flex;
+      /* background-color: rgb(239, 237, 237); */
+    
+      flex-direction: column;
+      align-items: center;
+      justify-content:center;
+    }
+    
+    
+    
+    
+    
+    button.category1{
+      margin: 1rem 0rem;
+      width: 22rem;
+      height: 2rem;
+     border: none;
+     border-radius: 0.4rem;
+      cursor: pointer;
+     border: 2px solid black;
+    background: #b8f7d4;
+     position: relative;
+     overflow: hidden;
+    }
+    button.category1:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 2s infinite ease; 
+    }
+    
+    
+    
+    button.category2{
+      margin: 1rem 0rem;
+      width: 22rem;
+      height: 2rem;
+     border: none;
+     border-radius: 0.4rem;
+     cursor: pointer;
+     border: 2px solid black;
+    background:#6fe7db;
+     position: relative;
+     overflow: hidden;
+    }
+    button.category2:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 2s infinite ease; 
+    }
+    
+    
+    
+    
+    button.category3{
+      margin: 1rem 0rem;
+      width: 22rem;
+      height: 2rem;
+      cursor: pointer;
+      border-radius: 0.4rem;
+     border: 2px solid black;
+    background: #7fa6ee;
+    
+     position: relative;
+     overflow: hidden;
+    }
+    button.category3:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 2s infinite ease; 
+    }
+    
+    button.category4{
+      margin: 1rem 0rem;
+      width: 22rem;
+      height: 2rem;
+     border: 2px solid black;
+     border-radius: 0.4rem;
+     cursor: pointer;
+    background: #835af1;
+     position: relative;
+     overflow: hidden;
+    }
+    button.category4:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 2s infinite ease; 
+    }
+    
+    button.category5{
+      margin: 1rem 0rem;
+      width: 22rem;
+      height: 2rem;
+     border: 2px solid black;
+     border-radius: 0.4rem;
+     cursor: pointer;
+    background: #28615b;
+     position: relative;
+     overflow: hidden;
+    }
+    button.category5:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 2s infinite ease; 
+    }
+    
+    button.category6{
+      margin: 1rem 0rem;
+      width: 22rem;
+      height: 2rem;
+     border: 2px solid black;
+     border-radius: 0.4rem;
+     cursor: pointer;
+    background:#e4f6f6;
+     position: relative;
+     overflow: hidden;
+    }
+    
+    button.category6:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 2s infinite ease; 
+    }
+    
+    button.category7{
+      margin: 1rem 0rem;
+      width: 22rem;
+      height: 2rem;
+     border: 2px solid black;
+     border-radius: 0.4rem;
+     cursor: pointer;
+    
+    background:#ccccea;
+     position: relative;
+     overflow: hidden;
+    }
+    button.category7:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 2s infinite ease; 
+    }
+    
+    button.category8{
+      margin: 1rem 0rem;
+      width: 22rem;
+      height: 2rem;
+     border: 2px solid black;
+     border-radius: 0.4rem;
+     cursor: pointer;
+    background: #c089f8;
+     position: relative;
+     overflow: hidden;
+    }
+    button.category8:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 2s infinite ease; 
+    }
+    
+    button h3{
+    font-family: 'Ysabeau SC';
+    font-size: 1rem;
+    }
+    button.toggle-map-btn{
+    font-family: 'Ysabeau SC';
+    font-size: 1rem;
+    color: #000000;
+    padding: 0.1rem;
+    background-color: rgb(185, 113, 127);
+    box-shadow: #000000;
+    text-shadow: #000000;
+    cursor: pointer;
+    
+    }
+    
+    
+    
+    @keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .map-container iframe{
+      height: 35vh;
+      width: 25vh;
+      border: 2px solid black;
+    }
+    
+    .location-card[data-card-number="1"] {
+      background-image: url('/images/victoria.png');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+      
+    }
+    
+    .location-card[data-card-number="2"] {
+      background-image: url('/images/howrah.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="3"] {
+      background-image: url('/images/marblepalace.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="4"] {
+      background-image: url('/images/dakshKali.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="5"] {
+      background-image: url('/images/BelurMath.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="6"] {
+      background-image: url('/images/jorasankoThakurbari.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="7"] {
+      background-image: url('/images/STpaul.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="8"] {
+      background-image: url('/images/tipuSultan.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="9"] {
+      background-image: url('/images/nakhoda.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="12"] {
+      background-image: url('/images/indianmuseum.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="13"] {
+      background-image: url('/images/vicmuseum.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="14"] {
+      background-image: url('/images/mothwax.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="15"] {
+      background-image: url('/images/netbhwan.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="16"] {
+      background-image: url('/images/birlamuseum.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="17"] {
+      background-image: url('/images/aliporemuseum.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="18"] {
+      background-image: url('/images/nicco.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="19"] {
+      background-image: url('/images/aquatica.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="20"] {
+      background-image: url('/images/ecopark.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="21"] {
+      background-image: url('/images/sccity.jpg');
+      background-size: cover;
+     border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="22"] {
+      background-image: url('/images/alipzoo.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="23"] {
+      background-image: url('/images/quest.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="24"] {
+      background-image: url('/images/southcity.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="25"] {
+      background-image: url('/images/citycentre.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="26"] {
+      background-image: url('/images/forum.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="27"] {
+      background-image: url('/images/maniSQ.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="28"] {
+      background-image: url('images/acropolis.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="29"] {
+      background-image: url('/images/rabindrasarob.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="30"] {
+      background-image: url('/images/millenniumpark.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="31"] {
+      background-image: url('/images/maidan.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="32"] {
+      background-image: url('/images/esplanade.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    
+    .location-card[data-card-number="33"] {
+      background-image: url('/images/gariahat.png');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    
+    .location-card[data-card-number="34"] {
+      background-image: url('/images/badabazar.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="35"] {
+      background-image: url('/images/sothparkcemet.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="36"] {
+      background-image: url('/images/nationallib.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="37"] {
+      background-image: url('/images/putulBari.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    .location-card[data-card-number="38"] {
+      background-image: url('/images/biswabangla.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    
+    .location-card[data-card-number="39"] {
+      background-image: url('/images/arsalan.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    
+    .location-card[data-card-number="40"] {
+      background-image: url('/images/dadaboudi.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    
+    .location-card[data-card-number="41"] {
+      background-image: url('/images/sufia.jpg');
+      background-size: cover;
+      border: 0.5rem solid rgb(58, 58, 58);
+      background-position: center;
+      background-repeat:no-repeat ;
+      border-radius: 5%;
+    }
+    
+    
+    
+    
+    
+    
+    
+    

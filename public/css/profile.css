@@ -1,0 +1,154 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  background: url(/images/post.bg.png);
+  background-position: center;
+  background-size: cover;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  margin-top: 30vh;
+}
+
+#nav {
+  /* background-color: #9b9898; */
+  width: 100%;
+  display: flex;
+
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 2px;
+}
+
+#nav img {
+  height: 6rem;
+  width: 6rem;
+  margin-left: 1rem;
+
+  filter: invert(1);
+}
+
+#nav a {
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  pointer-events: all;
+}
+
+#menu-toggle {
+  color: #ffffff;
+  display: none;
+  cursor: pointer;
+  /* margin-right: 1rem; */
+  font-size: 1rem;
+  background: none;
+  border: none;
+}
+
+#nleft {
+  display: flex;
+
+  align-items: center;
+  gap: 30px;
+}
+
+@media (max-width: 600px) {
+  #nleft {
+    display: none;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+}
+
+.profile-container {
+  margin-top: 18vh;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #d7acd4;
+  padding: 2vh;
+}
+
+.profile-container form {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2vh;
+}
+form label {
+  margin: 1vh;
+  font-family: "Play", sans-serif;
+  font-size: 2vh;
+  /* color: #d7acd4; */
+
+  font-weight: 900;
+}
+form input {
+  margin: 1vh;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 2vh;
+  background-color: #6e4d6c;
+  color: black;
+  padding: 1vh;
+  font-weight: 900;
+}
+form input #location {
+  background-color: #000000;
+}
+.profile-container h2 {
+  font-family: "Play", sans-serif;
+  font-size: 3vh;
+
+  font-weight: 900;
+}
+.profile-container form button {
+  font-family: "Play", sans-serif;
+  font-weight: 900;
+  padding: 0.5vh;
+  margin-top: 0.5vh;
+}
+
+div.profile-images {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #aa68a6;
+  padding: 2vh;
+}
+div.profile-images h3,
+p {
+  font-family: "Play", sans-serif;
+  font-weight: 900;
+}
+div.profile-images img {
+  background-size: cover;
+  height: auto;
+  width: 10vh;
+  border: 0.5vh solid black;
+}

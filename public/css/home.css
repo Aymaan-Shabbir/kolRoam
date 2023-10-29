@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  /* background-color: #010101; */
+  font-family: "Play", "Courier New", "Franklin Gothic Medium", "Arial Narrow",
+    Arial, sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  /* background-color: #010101; 
+  
+    z-index: -1; */
+  background-color: #000;
+}
+/* .back {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  background-size: cover;
+} */
+.slideshow {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+
+  /* margin: auto; */
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgba(0, 0, 0, 0.374); */
+}
+
+#working-area {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1920px;
+  height: 100vh;
+  /* background-color: rgb(0, 0, 0); */
+  /* border: 1px solid red; */
+}
+
+#hero {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  width: 100%;
+  /* height: 100px; */
+  /* background-color: rgb(0, 0, 0); */
+  display: flex;
+  justify-content: space-between;
+}
+
+#heroleft {
+  min-width: 50%;
+  /* height: 100px; */
+  /* background-color: yellow; */
+}
+#heroleft .elem {
+  /* margin-top: 1rem; */
+  height: 7rem;
+  font-family: "Play", "Courier New";
+  /* background-color: red; */
+  overflow: hidden;
+  position: relative;
+}
+#heroleft .elem h1:nth-child(1) {
+  top: 0;
+}
+
+#heroleft .elem h1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-family: "Play", "Courier New";
+  /* margin-top: 0.5rem; */
+  padding-top: 0.5rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 900;
+}
+#heroleft button {
+  padding: 1vw 4vw;
+  font-family: "Play", "Courier New", "kajiro";
+  font-size: 3vw;
+  margin-top: 15px;
+  pointer-events: all;
+  cursor: pointer;
+}
+#heroleft button:hover {
+  background-color: #686868ab;
+}
+
+#nav {
+  width: 100%;
+  display: flex;
+  background-color: #010101;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 2px;
+  z-index: 999;
+}
+
+#nav img {
+  height: 6rem;
+  width: 6rem;
+  margin-left: 1rem;
+
+  filter: invert(1);
+}
+
+#nav a {
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  pointer-events: all;
+}
+
+#menu-toggle {
+  color: #ffffff;
+  display: none;
+  cursor: pointer;
+  /* margin-right: 1rem; */
+  font-size: 1rem;
+  background: none;
+  border: none;
+}
+
+#nleft {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+#nright {
+  display: flex;
+
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 600px) {
+  #nleft {
+    display: none;
+  }
+
+  #nright {
+    display: none;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+  .back {
+    background-size: contain; /* Adjust as needed for your design */
+  }
+  #heroleft .elem h1 {
+    font-size: 3rem; /* Adjust the size as per your preference */
+  }
+
+  #heroleft button {
+    font-size: 2rem; /* Adjust the size as per your preference */
+  }
+}
+
+footer {
+  background: #000;
+  padding: 20px 0px;
+  font-family: "Play", sans-serif;
+  text-align: center;
+}
+
+.footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 0.8em;
+}
+
+.footer .row a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s;
+}
+
+.footer .row a:hover {
+  color: #fff;
+}
+
+.footer .row ul {
+  width: 100%;
+}
+
+.footer .row ul li {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+.footer .row a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+@media (max-width: 720px) {
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+  .footer .row a i {
+    margin: 0% 3%;
+  }
+}
+
+#chatbot-container {
+  display: none;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #680747;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
+  pointer-events: all;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 2s ease-in-out;
+}
+#chatbot-container.open {
+  opacity: 1; /* Set height to 50% for the open state */
+}
+
+#chatbot {
+  padding: 20px;
+  box-sizing: border-box;
+
+  max-height: 50vh; /* Adjust the max-height as needed */
+  overflow-y: auto;
+}
+
+#chat-options {
+  margin-top: 10px;
+}
+#chat-greeting {
+  background-color: #cb9bba;
+  font-family: "Comic Neue";
+  font-weight: 1000;
+}
+
+#chat-options button {
+  margin-right: 10px;
+}
+#exit-btn {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-weight: 1000;
+  margin: 2px;
+  padding: 1px;
+  border: 2px solid black;
+  cursor: pointer;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
+  font-family: "Comic Neue";
+  border-radius: 3px;
+  color: red;
+}
+#explore-btn {
+  background-color: #f70776;
+  padding: 1px;
+  margin: 2px;
+  border: 2px solid black;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-family: "Comic Neue";
+  font-weight: 1000;
+  border-radius: 3px;
+  color: rgb(0, 0, 0);
+}
+#gallery-btn {
+  background-color: #f70776;
+  font-family: "Comic Neue";
+  font-weight: 1000;
+  padding: 1px;
+  cursor: pointer;
+  margin: 2px;
+  border: 2px solid black;
+  border-radius: 3px;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
+  color: rgb(0, 0, 0);
+}
+#about-dev-btn {
+  background-color: #f70776;
+  padding: 1px;
+  font-family: "Comic Neue";
+  font-weight: 1000;
+  margin: 2px;
+  border: 2px solid black;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
+  color: rgb(0, 0, 0);
+}
+#post-btn {
+  background-color: #f70776;
+  padding: 1px;
+  font-family: "Comic Neue";
+  font-weight: 1000;
+  margin: 2px;
+  border: 2px solid black;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
+  color: rgb(0, 0, 0);
+}
+
+#user-input {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #c3cfe2;
+  width: calc(100% - 16px);
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#chat-response {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#send-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #2666ab;
+  font-family: "Comic Neue";
+  color: #fff;
+  border: none;
+  pointer-events: all;
+  cursor: pointer;
+}
+.user-message {
+  background-color: #27296d;
+  color: #ffffff;
+  font-family: "Comic Neue";
+  margin: 5px 0px;
+  text-align: right;
+}
+
+.bot-message {
+  color: #000;
+  font-family: "Comic Neue";
+  text-align: left;
+  margin: 5px 0px;
+  background-color: #f0ece2;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="../css/signup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Comic+Neue:wght@700&family=Handjet:wght@300&family=IBM+Plex+Mono:wght@500&family=Play&family=Playpen+Sans&family=Poppins:wght@100;200&family=Source+Code+Pro:ital,wght@1,200&family=Ysabeau+SC:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="nav">
+      <img src="./images/KolTour2.png" alt="Logo" />
+      <button id="menu-toggle">&#9776;</button>
+      <div id="nleft">
+        <a href="/">HOME</a>
+        <a href="/places">PLACES</a>
+        <a href="/login">POST</a>
+
+        <a href="/gallery">GALLERY</a>
+        <a href="/about">ABOUT</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>Signup</h1>
+      <p><%= message %></p>
+
+      <div class="form">
+        <form method="post" action="/signup" enctype="multipart/form-data">
+          <label for="username">Username:</label>
+          <input type="text" name="username" id="username" required />
+          <br />
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" required />
+          <br />
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+      <p>Existing User? <a href="/login">Log In</a></p>
+    </div>
+
+    <script>console.log("active login");
+var menuToggle = document.getElementById("menu-toggle");
+var nleft = document.getElementById("nleft");
+// var nright = document.getElementById('nright');
+var nav = document.getElementById("nav");
+console.log("active login");
+menuToggle.addEventListener("click", function () {
+  nleft.style.display =
+    nleft.style.display === "none" || nleft.style.display === ""
+      ? "flex"
+      : "none";
+  // nright.style.display = (nright.style.display === 'none' || nright.style.display === '') ? 'flex' : 'none';
+
+  // If the menu is open, set flex direction to column for nleft and nright
+  if (nleft.style.display === "flex") {
+    nleft.style.flexDirection = "column";
+    nleft.style.marginTop = "1rem";
+    // nright.style.flexDirection = 'column';
+    nav.style.background = "#004141";
+    menuToggle.style.marginRight = "1rem";
+  } else {
+    // If the menu is closed, reset flex direction to row for nleft and nright
+    nleft.style.flexDirection = "row";
+    // nright.style.flexDirection = 'row';
+    nleft.style.marginTop = "0";
+    nav.style.background = "transparent";
+    menuToggle.style.marginRight = "0";
+  }
+});
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 600) {
+    nleft.style.display = "flex";
+    // nright.style.display = 'flex';
+  } else {
+    nleft.style.display = "none";
+    // nright.style.display = 'none';
+    menuToggle.style.marginRight = "0";
+  }
+});</script>
+  </body>
+</html>

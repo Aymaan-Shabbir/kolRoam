@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/places.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Poppins:wght@100;200&family=Source+Code+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300&family=IBM+Plex+Mono:wght@500&family=Poppins:wght@100;200&family=Source+Code+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300&family=IBM+Plex+Mono:wght@500&family=Poppins:wght@100;200&family=Source+Code+Pro:ital,wght@1,200&family=Ysabeau+SC:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+  <title>KolRoam Places</title>
+</head>
+<body>
+
+  <div id="nav">
+    <img src="/images/KolTour2.png" alt="Logo">
+  <button id="menu-toggle">&#9776;</button>
+    <div id="nleft">
+      <a href="/">HOME</a>
+      <a href="/places">PLACES</a>
+      <a href="/login">POST</a>
+      <a href="/gallery">GALLERY</a>
+      <a href="/about">ABOUT</a>
+
+
+    </div>
+    
+   
+</div>
+
+
+
+
+
+  <div class="main">
+
+    <div class="about">
+      <h4>Embark on a virtual journey through Kolkata's heartbeat with KolRoam's Places page, where we unveil the city's hidden gems and celebrate its iconic landmarks. From the bustling markets to serene parks, KolRoam's Places page is your guide to the must-visit spots in Kolkata. Immerse yourself in the diverse experiences that this city has to offer.</h4>
+    </div>
+    
+    <div class="location-cards">
+      <button class="category1" onclick="toggleCategoryDisplay('heritage'); refreshAOS();""><h3>HERITAGE</h3></button>
+      <div class="heritage">
+      
+      <!-- card 1 victoria-->
+    
+      <div class="location-card"  data-aos="fade-up" data-card-number="1" >
+       
+        <div class="card-content">
+          <div class="label"><h4>VICTORIA MEMORIAL</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer1">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14738.653488551485!2d88.32017782375122!3d22.554279501523116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02777b4bc6587d%3A0x2aeeccf92dc3690d!2sVictoria%20Memorial!5e0!3m2!1sen!2sin!4v1697704601056!5m2!1sen!2sin" width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(1)">Show Map</button>
+        </div>
+        
+      </div>
+
+
+      <!-- card 2 howrah bridge--> 
+     
+      <div class="location-card" data-aos="fade-down" data-card-number="2" >
+       
+        <div class="card-content">
+          <div class="label"><h4>HOWRAH BRIDGE</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer2">
+            <!-- Replace the iframe code with your actual iframe code -->
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44673.10766315515!2d88.32017487140448!3d22.573216621643258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277bfbb1eeb1b%3A0xc9840aaa8c411199!2sHowrah%20Bridge!5e0!3m2!1sen!2sin!4v1697703678009!5m2!1sen!2sin" width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(2)">Show Map</button>
+        </div>
+        
+      </div>
+
+  
+
+
+      <!-- card 3 marble palace-->
+     
+      <div class="location-card" data-aos="fade-left" data-card-number="3" >
+       
+        <div class="card-content">
+          <div class="label"><h4>MARBLE PALACE</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer3">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29473.060281698046!2d88.33538473355169!3d22.574145837841748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277b47c219ecf%3A0xd84d8f38f281569d!2sMarble%20Palace%2C%20Raja%20Katra%2C%20Machuabazar%2C%20Kolkata%2C%20West%20Bengal%20700007!5e0!3m2!1sen!2sin!4v1697704264308!5m2!1sen!2sin" width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(3)">Show Map</button>
+        </div>
+        
+      </div>
+
+
+      <!-- card 4 dakshineshwar-->
+     
+      <div class="location-card"  data-aos="fade-right" data-card-number="4">
+       
+        <div class="card-content">
+          <div class="label"><h4>DAKSHINESHWAR TEMPLE</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer4">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.149939954151!2d88.36472973315001!3d22.648197554755566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d03ddd97829%3A0xffa380efed305d4c!2sDakshineswar%20Kali%20Temple!5e0!3m2!1sen!2sin!4v1697704429377!5m2!1sen!2sin" width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(4)">Show Map</button>
+        </div>
+        
+      </div>
+
+
+      <!-- card 5 belur math-->
+     
+      <div class="location-card" data-aos="fade-up" data-card-number="5">
+       
+        <div class="card-content">
+          <div class="label"><h4>BELUR MATH</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer5">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14730.266151918406!2d88.33835810422893!3d22.632656295665825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d73bcbb31eb%3A0x9e346e968d3e4219!2sBelur%20Math!5e0!3m2!1sen!2sin!4v1697704750996!5m2!1sen!2sin" width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(5)">Show Map</button>
+        </div>
+        
+      </div>
+
+
+      <!-- card 6 thakurbari-->
+     
+      <div class="location-card" data-aos="fade-down" data-card-number="6">
+       
+        <div class="card-content">
+          <div class="label"><h4>JORASANKHO THAKURBARI</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer6">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.875698080724!2d88.36043974760746!3d22.58375190798179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277923fa73137%3A0xda01af2a868e4294!2sJorasanko%20Thakurbari%20Gate!5e0!3m2!1sen!2sin!4v1697704911014!5m2!1sen!2sin" width="100%" height="100%" ></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(6)">Show Map</button>
+        </div>
+        
+      </div>
+
+     <!-- card 7 st pauls-->
+     
+      <div class="location-card" data-aos="fade-left" data-card-number="7">
+       
+        <div class="card-content">
+          <div class="label"><h4>St. PAUL'S CATHEDRAL</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer7">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.931389173373!2d88.34410687246395!3d22.54424277951191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02771442588f31%3A0x646622ccc71971e5!2sSt.%20Paul&#39;s%20Cathedral!5e0!3m2!1sen!2sin!4v1697705148489!5m2!1sen!2sin" width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(7)">Show Map</button>
+        </div>
+        
+      </div>
+
+
+      <!-- card 8 tipu sultan-->
+     
+      <div class="location-card" data-aos="fade-right" data-card-number="8">
+       
+        <div class="card-content">
+          <div class="label"><h4>TIPU SULTAN MOSQUE</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer8">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.3631189676075!2d88.34951847246501!3d22.565518379496734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277a7c161e97f%3A0xb98c0c81435de34b!2sTipu%20Sultan%20Masjid%20Kolkata!5e0!3m2!1sen!2sin!4v1697705431930!5m2!1sen!2sin" width="100"% height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(8)">Show Map</button>
+        </div>
+        
+      </div>
+
+
+      <!-- card 9 nakhoda-->
+     
+      <div class="location-card" data-aos="fade-up" data-card-number="9">
+       
+        <div class="card-content">
+          <div class="label"><h4>NAKHODA MOSQUE</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer9">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.039183281184!2d88.35346867246562!3d22.57763777948804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277b1b0c0b993%3A0x2d436551231224e9!2sNakhoda%20Masjid!5e0!3m2!1sen!2sin!4v1697705601535!5m2!1sen!2sin" width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(9)">Show Map</button>
+        </div>
+        
+      </div>
+
+      
+
+
+ 
+
+     </div>          <!--  end of heritage -->
+    
+
+
+ 
+        <!-- MUSEUMS-->
+    
+    
+    
+    
+    <button class="category2" onclick="toggleCategoryDisplay('museum'); refreshAOS();"><h3>MUSEUMS</h3></button>
+      <div class="museum">
+
+
+      <!-- card 12  INDIA MUSEUM -->
+     
+      <div class="location-card" data-aos="fade-down" data-card-number="12">
+       
+        <div class="card-content">
+          <div class="label"><h4>INDIAN MUSEUM</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer12">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29479.015488038338!2d88.33564222559967!3d22.54628228864132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02771160347adf%3A0x9fd70619f94d0bac!2sIndian%20Museum!5e0!3m2!1sen!2sin!4v1697788624266!5m2!1sen!2sin" width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(12)">Show Map</button>
+        </div>
+        
+      </div>
+
+
+      <!-- card 13-->
+     
+      <div class="location-card" data-aos="fade-left" data-card-number="13">
+       
+        <div class="card-content">
+          <div class="label"><h4>VICTORIA MEMORIAL HALL</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer13">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230.3072683407716!2d88.34227622486652!3d22.54480819775483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02771346ae015d%3A0xb540e4bce39763!2sVictoria%20Memorial!5e0!3m2!1sen!2sin!4v1697788911453!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(13)">Show Map</button>
+        </div>
+        
+      </div>
+
+
+       <!-- card 14 Mother's Wax Museum-->
+
+      <div class="location-card" data-aos="fade-right" data-card-number="14">
+       
+        <div class="card-content">
+          <div class="label"><h4>MOTHER'S WAX MUSEUM</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer14">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.4544371984093!2d88.46969677246673!3d22.599499279472504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02754e362326b5%3A0x4434535eed25c37!2sMother&#39;s%20Wax%20Museum!5e0!3m2!1sen!2sin!4v1697789135672!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(14)">Show Map</button>
+        </div>
+        
+      </div>
+
+
+
+       <!-- card 15 netaji bhawan -->
+
+       <div class="location-card" data-aos="fade-up" data-card-number="15">
+       
+        <div class="card-content">
+          <div class="label"><h4>NETAJI BHAWAN</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer15">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.109215726247!2d88.34846397246363!3d22.537581179516582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02773d04114e0f%3A0x7d0d81a424eb79d6!2sNetaji%20Bhawan!5e0!3m2!1sen!2sin!4v1697789336144!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(15)">Show Map</button>
+        </div>
+        
+      </div>
+      
+
+
+
+       <!-- card 16 BIRLA MUSEUM-->
+
+       <div class="location-card" data-aos="fade-down" data-card-number="16">
+       
+        <div class="card-content">
+          <div class="label"><h4>BIRLA MUSEUM</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer16">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.1833096542878!2d88.36115117246347!3d22.534804979518633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0276d8ed9bd11d%3A0xa5cd1cbc481fa477!2sBirla%20Industrial%20%26%20Technological%20Museum!5e0!3m2!1sen!2sin!4v1697789406772!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(16)">Show Map</button>
+        </div>
+        
+      </div>
+      
+
+
+
+       <!-- card 17 ALIPORE MUSEUM-->
+
+       <div class="location-card" data-aos="fade-left" data-card-number="17">
+       
+        <div class="card-content">
+          <div class="label"><h4>ALIPORE MUSEUM</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer17">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29483.666810767827!2d88.31882823476562!3d22.52449670000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277542b354a11%3A0x26ff2f1b4cc8b239!2sAlipore%20Museum!5e0!3m2!1sen!2sin!4v1697789549667!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(17)">Show Map</button>
+        </div>
+        
+      </div>
+      
+
+
+    </div>        <!--end of museums -->
+
+
+    
+    
+
+
+          <!-- AMUSEMENT PARKS AND PICNIC SPOTS -->
+
+
+
+
+    <button class="category3" onclick="toggleCategoryDisplay('amuse'); refreshAOS();"><h3>AMUSEMENT PARKS AND PICNIC SPOTS</h3></button>
+      <div class="amuse">
+
+
+      <!-- card 18  NICCO PARK -->
+     
+      <div class="location-card"  data-aos="fade-right" data-card-number="18">
+       
+        <div class="card-content">
+          <div class="label"><h4>NICCO PARK</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer18">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235869.4799446089!2d88.1746047553686!3d22.5244114995957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275b5f38c67df%3A0x842d73d378313791!2sNicco%20park!5e0!3m2!1sen!2sin!4v1697789945858!5m2!1sen!2sin" width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(18)">Show Map</button>
+        </div>
+        
+      </div>
+
+
+      <!-- card 19 AQUATICA -->
+     
+      <div class="location-card"  data-aos="fade-up" data-card-number="19">
+       
+        <div class="card-content">
+          <div class="label"><h4>AQUATICA</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer19">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235869.76638028384!2d88.1746023444019!3d22.524243722732272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02750e54b44c0d%3A0x3182cd1bd4b1e8da!2sAquatica%20Banquet%20Resort%20%26%20Water%20Park!5e0!3m2!1sen!2sin!4v1697790021445!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(19)">Show Map</button>
+        </div>
+        
+      </div>
+
+
+       <!-- card 20 ECO PARK-->
+
+      <div class="location-card" data-aos="fade-down" data-card-number="20">
+       
+        <div class="card-content">
+          <div class="label"><h4>ECO PARK</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer20">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235870.05281226145!2d88.17459993343225!3d22.52407594684968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027544e22a5b6f%3A0xf22acb90ceebe765!2sEco%20Park!5e0!3m2!1sen!2sin!4v1697790123950!5m2!1sen!2sin"   width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(20)">Show Map</button>
+        </div>
+        
+      </div>
+
+
+
+       <!-- card 21 SCIENCE CITY -->
+
+       <div class="location-card" data-aos="fade-left" data-card-number="21">
+       
+        <div class="card-content">
+          <div class="label"><h4>SCIENCE CITY</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer21">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29480.32773191683!2d88.36000751083984!3d22.540138100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0276a208cb6793%3A0x676bbf22d04354e8!2sScience%20City%20-%20Kolkata!5e0!3m2!1sen!2sin!4v1697790195919!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(21)">Show Map</button>
+        </div>
+        
+      </div>
+      
+
+
+
+       <!-- card 22 ALIPORE ZOO-->
+
+       <div class="location-card" data-aos="fade-right" data-card-number="22">
+       
+        <div class="card-content">
+          <div class="label"><h4>ALIPORE ZOO</h4></div>
+          <!-- Include the map iframe directly in the HTML -->
+          <div class="map-container" id="mapContainer22">
+            <!-- Replace the iframe code with your actual iframe code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.1238126101293!2d88.32909477246359!3d22.537034279517005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027750fffffffd%3A0xdf99a9bbe613a36a!2sZoological%20Garden%2C%20Alipore!5e0!3m2!1sen!2sin!4v1697790321398!5m2!1sen!2sin" width="100%" height="100%"></iframe>
+          </div>
+          <button class="toggle-map-btn" onclick="toggleMap(22)">Show Map</button>
+        </div>
+        
+      </div>
+
+
+     </div>        <!--end of amusemnet parks and picnic spots -->
+
+
+
+
+     
+          <!-- AMUSEMENT PARKS AND PICNIC SPOTS -->
+
+
+
+
+    <button class="category4" onclick="toggleCategoryDisplay('malls'); refreshAOS();"><h3>MALLS AND THEATERS</h3></button>
+    <div class="malls">
+
+
+    <!-- card 23  QUEST MALl -->
+   
+    <div class="location-card" data-aos="fade-up" data-card-number="23">
+     
+      <div class="card-content">
+        <div class="label"><h4>QUEST MALL</h4></div>
+        <!-- Include the map iframe directly in the HTML -->
+        <div class="map-container" id="mapContainer23">
+          <!-- Replace the iframe code with your actual iframe code -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.072629959982!2d88.36317887246372!3d22.538951879515633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0276dfad4bf901%3A0xfbbe370e3a5a4dc8!2sQuest%20Mall!5e0!3m2!1sen!2sin!4v1697790827927!5m2!1sen!2sin" width="100%" height="100%"></iframe>
+        </div>
+        <button class="toggle-map-btn" onclick="toggleMap(23)">Show Map</button>
+      </div>
+      
+    </div>
+
+
+    <!-- card 24 SOUTH CITY MALL -->
+   
+    <div class="location-card" data-aos="fade-down" data-card-number="24">
+     
+      <div class="card-content">
+        <div class="label"><h4>SOUTH CITY MALL</h4></div>
+        <!-- Include the map iframe directly in the HTML -->
+        <div class="map-container" id="mapContainer24">
+          <!-- Replace the iframe code with your actual iframe code -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.067204718277!2d88.35892587246185!3d22.501661579542233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0270d861b6d22b%3A0xee3d107a198d3cdf!2sSouth%20City%20Mall!5e0!3m2!1sen!2sin!4v1697790978658!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+        </div>
+        <button class="toggle-map-btn" onclick="toggleMap(24)">Show Map</button>
+      </div>
+      
+    </div>
+
+
+     <!-- card 25 CITY CENTRE-->
+
+    <div class="location-card" data-aos="fade-left" data-card-number="25">
+     
+      <div class="card-content">
+        <div class="label"><h4>CITY CENTRE MALL</h4></div>
+        <!-- Include the map iframe directly in the HTML -->
+        <div class="map-container" id="mapContainer25">
+          <!-- Replace the iframe code with your actual iframe code -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.758971160329!2d88.40567127246611!3d22.58811637948065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275e77d80e877%3A0x110955b936be866a!2sCity%20Centre%20Salt%20Lake!5e0!3m2!1sen!2sin!4v1697791056163!5m2!1sen!2sin"    width="100%" height="100%"></iframe>
+        </div>
+        <button class="toggle-map-btn" onclick="toggleMap(25)">Show Map</button>
+      </div>
+      
+    </div>
+
+
+
+     <!-- card 26 FORUM MALL -->
+
+     <div class="location-card" data-aos="fade-right" data-card-number="26">
+     
+      <div class="card-content">
+        <div class="label"><h4>FORUM MALL</h4></div>
+        <!-- Include the map iframe directly in the HTML -->
+        <div class="map-container" id="mapContainer26">
+          <!-- Replace the iframe code with your actual iframe code -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.087334451181!2d88.34876427246367!3d22.53840097951604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02773d6ddeb62f%3A0xa285912d700a4398!2sForum%20Courtyard%20Mall!5e0!3m2!1sen!2sin!4v1697791150185!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+        </div>
+        <button class="toggle-map-btn" onclick="toggleMap(26)">Show Map</button>
+      </div>
+      
+    </div>
+    
+
+
+
+     <!-- card 27 MANI SQUARE-->
+
+     <div class="location-card" data-aos="fade-up" data-card-number="27">
+     
+      <div class="card-content">
+        <div class="label"><h4>MANI SQUARE MALL</h4></div>
+        <!-- Include the map iframe directly in the HTML -->
+        <div class="map-container" id="mapContainer27">
+          <!-- Replace the iframe code with your actual iframe code -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.0378331374773!2d88.39848447246561!3d22.57768827948801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027677c1c8a03b%3A0xe1bc02832a8f64a4!2sMani%20Square!5e0!3m2!1sen!2sin!4v1697791236677!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+        </div>
+        <button class="toggle-map-btn" onclick="toggleMap(27)">Show Map</button>
+      </div>
+      
+    </div>
+
+     <!-- card 28 ACROPOLIS MALL-->
+
+     <div class="location-card" data-aos="fade-down" data-card-number="28">
+     
+      <div class="card-content">
+        <div class="label"><h4>ACROLPOLIS MALL</h4></div>
+        <!-- Include the map iframe directly in the HTML -->
+        <div class="map-container" id="mapContainer28">
+          <!-- Replace the iframe code with your actual iframe code -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.711929727755!2d88.39040167246249!3d22.51498887953276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027152eb607059%3A0x265403909555d32c!2sAcropolis%20Mall!5e0!3m2!1sen!2sin!4v1697791321039!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+        </div>
+        <button class="toggle-map-btn" onclick="toggleMap(28)">Show Map</button>
+      </div>
+      
+    </div>
+
+
+  </div>        <!--end of malls -->
+
+
+
+  <!-- LAKES AND PARKS -->
+
+
+
+
+  <button class="category5" onclick="toggleCategoryDisplay('parks'); refreshAOS();"><h3>PARKS AND LAKES</h3></button>
+  <div class="parks">
+
+
+  <!-- card 29  RABINDRA SAROBAR-->
+ 
+  <div class="location-card" data-aos="fade-left" data-card-number="29">
+   
+    <div class="card-content">
+      <div class="label"><h4>RABINDRA SAROBAR</h4></div>
+      <!-- Include the map iframe directly in the HTML -->
+      <div class="map-container" id="mapContainer29">
+        <!-- Replace the iframe code with your actual iframe code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.78496619993!2d88.3639759!3d22.512249699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02712a69e0c4ab%3A0x42adeb47a2d1245!2sRabindra%20Sarobar!5e0!3m2!1sen!2sin!4v1697791630496!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+      </div>
+      <button class="toggle-map-btn" onclick="toggleMap(29)">Show Map</button>
+    </div>
+    
+  </div>
+
+
+  <!-- card 30 MILLENNIUM PARK -->
+ 
+  <div class="location-card" data-aos="fade-right" data-card-number="30">
+   
+    <div class="card-content">
+      <div class="label"><h4>MILLENNIUM PARK</h4></div>
+      <!-- Include the map iframe directly in the HTML -->
+      <div class="map-container" id="mapContainer30">
+        <!-- Replace the iframe code with your actual iframe code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.167952446505!2d88.34197437246542!3d22.572820879491527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277a2e8448a01%3A0xfc7031bafe756ae4!2sMillennium%20Park!5e0!3m2!1sen!2sin!4v1697791749643!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+      </div>
+      <button class="toggle-map-btn" onclick="toggleMap(30)">Show Map</button>
+    </div>
+    
+  </div>
+
+
+   <!-- card 31 MAIDAN-->
+
+  <div class="location-card" data-aos="fade-up" data-card-number="31">
+   
+    <div class="card-content">
+      <div class="label"><h4>MAIDAN</h4></div>
+      <!-- Include the map iframe directly in the HTML -->
+      <div class="map-container" id="mapContainer31">
+        <!-- Replace the iframe code with your actual iframe code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29478.210674877017!2d88.30927461083981!3d22.55004980000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02770e0ea6fd4f%3A0xa9d8d39846338d7e!2sMaidan!5e0!3m2!1sen!2sin!4v1697792020404!5m2!1sen!2sin"     width="100%" height="100%"></iframe>
+      </div>
+      <button class="toggle-map-btn" onclick="toggleMap(31)">Show Map</button>
+    </div>
+    
+  </div>
+
+
+
+   
+
+ </div>     <!-- end of parks -->
+
+
+
+
+  <!-- LOCAL MARKETS -->
+
+
+
+
+  <button class="category6" onclick="toggleCategoryDisplay('localM'); refreshAOS();"><h3>LOCAL MARKETS</h3></button>
+  <div class="localM">
+
+
+  <!-- card 32  ESPLANADE, NEW MARKET-->
+ 
+  <div class="location-card" data-aos="fade-down" data-card-number="32">
+   
+    <div class="card-content">
+      <div class="label"><h4>ESPLANADE, NEW MARKET</h4></div>
+      <!-- Include the map iframe directly in the HTML -->
+      <div class="map-container" id="mapContainer32">
+        <!-- Replace the iframe code with your actual iframe code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.4817872779363!2d88.35223210000002!3d22.561077100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027760b4949643%3A0xb8f3e9b46b3c67f4!2sEsplanade%20Market!5e0!3m2!1sen!2sin!4v1697792551012!5m2!1sen!2sin"   width="100%" height="100%"></iframe>
+      </div>
+      <button class="toggle-map-btn" onclick="toggleMap(32)">Show Map</button>
+    </div>
+    
+  </div>
+
+
+  <!-- card 33 GARIAHAT MARKET -->
+ 
+  <div class="location-card"data-aos="fade-left" data-card-number="33">
+   
+    <div class="card-content">
+      <div class="label"><h4>GARIAHAT MARKET</h4></div>
+      <!-- Include the map iframe directly in the HTML -->
+      <div class="map-container" id="mapContainer33">
+        <!-- Replace the iframe code with your actual iframe code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2116.816725558522!2d88.36420914958737!3d22.519485467043385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0276d45d3a6f45%3A0x416fab29bbebdbdd!2sGariahat%20Market%2C%20Kolkata%2C%20West%20Bengal%20700019!5e0!3m2!1sen!2sin!4v1697792632854!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+      </div>
+      <button class="toggle-map-btn" onclick="toggleMap(33)">Show Map</button>
+    </div>
+    
+  </div>
+
+
+   <!-- card 34 BADA BAZAR MARKET-->
+
+  <div class="location-card" data-aos="fade-right" data-card-number="34">
+   
+    <div class="card-content">
+      <div class="label"><h4>BADA BAZAR MARKET</h4></div>
+      <!-- Include the map iframe directly in the HTML -->
+      <div class="map-container" id="mapContainer34">
+        <!-- Replace the iframe code with your actual iframe code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14736.20591306501!2d88.3530754!3d22.577177900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277b0a10c25d5%3A0xdc7edbb682b0694b!2sBarabazar%20Market%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1697792800337!5m2!1sen!2sin"      width="100%" height="100%"></iframe>
+      </div>
+      <button class="toggle-map-btn" onclick="toggleMap(34)">Show Map</button>
+    </div>
+    
+  </div>
+
+
+
+   
+
+ </div>     <!-- end of local markets -->
+
+
+
+
+ <!-- SPOOKY SPOTS -->
+
+
+
+
+ <button class="category7" onclick="toggleCategoryDisplay('spooky'); refreshAOS();"><h3>SPOOKY SPOTS</h3></button>
+ <div class="spooky">
+ 
+  <!-- card 35 SOUTH PARK CEMETERY-->
+ 
+  <div class="location-card" data-aos="fade-left" data-card-number="35">
+   
+    <div class="card-content">
+      <div class="label"><h4>SOUTH PARK CEMETERY</h4></div>
+      <!-- Include the map iframe directly in the HTML -->
+      <div class="map-container" id="mapContainer35">
+        <!-- Replace the iframe code with your actual iframe code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.869198454877!2d88.35761257246405!3d22.54657207951022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02771c2bcea5a7%3A0x275fbede812d6663!2sSouth%20Park%20Street%20Cemetery!5e0!3m2!1sen!2sin!4v1697793181604!5m2!1sen!2sin"   width="100%" height="100%"></iframe>
+      </div>
+      <button class="toggle-map-btn" onclick="toggleMap(35)">Show Map</button>
+    </div>
+    
+  </div>
+
+
+  <!-- card 36 NATIONAL LIBRARY -->
+ 
+  <div class="location-card" data-aos="fade-right" data-card-number="36">
+   
+    <div class="card-content">
+      <div class="label"><h4>NATIONAL LIBRARY</h4></div>
+      <!-- Include the map iframe directly in the HTML -->
+      <div class="map-container" id="mapContainer36">
+        <!-- Replace the iframe code with your actual iframe code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7370.459392662988!2d88.3283834698844!3d22.533066767980117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02775b4c0615c9%3A0x37cd81c0c0a20ff2!2sThe%20National%20Library%20of%20India!5e0!3m2!1sen!2sin!4v1697793236627!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+      </div>
+      <button class="toggle-map-btn" onclick="toggleMap(36)">Show Map</button>
+    </div>
+    
+  </div>
+
+
+   <!-- card 37 PUTUL BARI-->
+
+  <div class="location-card" data-aos="fade-left" data-card-number="37">
+   
+    <div class="card-content">
+      <div class="label"><h4>PUTUL BARI</h4></div>
+      <!-- Include the map iframe directly in the HTML -->
+      <div class="map-container" id="mapContainer37">
+        <!-- Replace the iframe code with your actual iframe code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.470134070249!2d88.35343077778813!3d22.598912693078937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277ce07f4f06f%3A0x59c308f331ba4119!2sPutulbari%20Heritage%20House!5e0!3m2!1sen!2sin!4v1697793280557!5m2!1sen!2sin"width="100%" height="100%"></iframe>
+      </div>
+      <button class="toggle-map-btn" onclick="toggleMap(37)">Show Map</button>
+    </div>
+    
+  </div>
+
+
+
+   
+
+ </div>     <!-- end of spooky spots -->
+
+
+
+
+
+ 
+ <!-- RESTAURANTS -->
+
+
+
+
+ <button class="category8" onclick="toggleCategoryDisplay('restaurant'); refreshAOS();"><h3>RESTAURANTS</h3></button>
+ <div class="restaurant">
+ 
+  <!-- card 38  BISWA BANGLA RESTAURANT-->
+ 
+  <div class="location-card" data-aos="fade-right" data-card-number="38">
+   
+    <div class="card-content">
+      <div class="label"><h4>BISWA BANGLA GATE</h4></div>
+      <!-- Include the map iframe directly in the HTML -->
+      <div class="map-container" id="mapContainer38">
+        <!-- Replace the iframe code with your actual iframe code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235776.78084506548!2d88.18341558671875!3d22.578647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02757023e0d4d3%3A0x50236d4275482829!2sBiswa%20Bangla%20Gate!5e0!3m2!1sen!2sin!4v1697793612103!5m2!1sen!2sin"   width="100%" height="100%"></iframe>
+      </div>
+      <button class="toggle-map-btn" onclick="toggleMap(38)">Show Map</button>
+    </div>
+    
+  </div>
+
+
+  <!-- card 39 ARSALAN -->
+ 
+  <div class="location-card" data-aos="fade-left" data-card-number="39">
+   
+    <div class="card-content">
+      <div class="label"><h4>ARSALAN</h4></div>
+      <!-- Include the map iframe directly in the HTML -->
+      <div class="map-container" id="mapContainer39">
+        <!-- Replace the iframe code with your actual iframe code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.945586469106!2d88.36590199999998!3d22.543711000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277056d20d12b%3A0x8f2323c380b87edf!2sArsalan%20Restaurant%20%26%20Caterer!5e0!3m2!1sen!2sin!4v1697793652515!5m2!1sen!2sin"   width="100%" height="100%"></iframe>
+      </div>
+      <button class="toggle-map-btn" onclick="toggleMap(39)">Show Map</button>
+    </div>
+    
+  </div>
+
+
+   <!-- card 40  DADA BOUDI-->
+
+  <div class="location-card" data-aos="fade-right" data-card-number="40">
+   
+    <div class="card-content">
+      <div class="label"><h4>DADA BOUDI</h4></div>
+      <!-- Include the map iframe directly in the HTML -->
+      <div class="map-container" id="mapContainer40">
+        <!-- Replace the iframe code with your actual iframe code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.1179615668443!2d88.36766657247483!3d22.761003179357957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89a5183d3d423%3A0xb1e418746aa037e9!2sDada%20Boudi%20Hotel!5e0!3m2!1sen!2sin!4v1697793697341!5m2!1sen!2sin" width="100%" height="100%"></iframe>
+      </div>
+      <button class="toggle-map-btn" onclick="toggleMap(40)">Show Map</button>
+    </div>
+    
+  </div>
+
+   <!-- card 41 SUFIA-->
+
+   <div class="location-card" data-aos="fade-left" data-card-number="41">
+   
+    <div class="card-content">
+      <div class="label"><h4>SUFIA</h4></div>
+      <!-- Include the map iframe directly in the HTML -->
+      <div class="map-container" id="mapContainer41">
+        <!-- Replace the iframe code with your actual iframe code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.04743647366!2d88.35344147246563!3d22.577329079488273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277b1b7bf50fd%3A0xa33101629e45e426!2sSufia%20Restaurant!5e0!3m2!1sen!2sin!4v1697793738532!5m2!1sen!2sin"  width="100%" height="100%"></iframe>
+      </div>
+      <button class="toggle-map-btn" onclick="toggleMap(41)">Show Map</button>
+    </div>
+    
+  </div>
+
+
+
+   
+
+ </div>     <!-- end of restaurants -->
+  
+    
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  
+    
+      
+    
+
+ 
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+     <script src="js/places.js"></script>
+      
+
+    
+  
+   
+    
+    
+    
+    
+    
+    
+
+ 
+
+
+
+
+
+</body>
+</html>

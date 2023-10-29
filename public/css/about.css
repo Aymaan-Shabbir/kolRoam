@@ -1,0 +1,157 @@
+html , body{
+    width: 100%;
+    height: 100%;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    background: url(/images/aboutbg1.png);
+    background-position: center;
+    background-size: cover;
+    
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    #nav {
+      /* background-color: #9b9898; */
+    width: 100%;
+    display: flex;
+    
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 2px;
+    }
+    
+    #nav img {
+    height: 6rem;
+    width: 6rem;
+    margin-left:1rem ;
+    
+    filter: invert(0);
+    }
+    
+    #nav a {
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    pointer-events: all;
+    }
+    
+    #menu-toggle {
+    color: #000000;
+    display: none;
+    cursor: pointer;
+    /* margin-right: 1rem; */
+    font-size: 1rem;
+    background: none;
+    border: none;
+    }
+    
+    #nleft {
+    display: flex;
+    
+    align-items: center;
+    gap: 30px;
+    }
+    
+   
+    
+    @media (max-width: 582px) {
+    #nleft {
+    display: none;
+    }
+    
+    
+    #menu-toggle {
+    display: block;
+    }
+    }
+
+    .about-top {
+      margin-top: 20vh;
+      margin-bottom: 20vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .left {
+      width: 100%;
+     max-width: 80vh;
+      margin: 0 auto; 
+      background-color: #2470a0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .left-text {
+      text-align: center; 
+      padding: 0 2vh;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .right {
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .right .right-img img{
+    width: 30vh;
+    height: 30vh;
+    object-fit: cover;
+
+  }
+  .dev{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ .dev .bottom-img img{
+  width: 30vh;
+  height: 20vh;
+  background-color: #2470a0;
+  object-fit: cover;
+ margin-bottom: 2vh;
+
+ }
+ .dev .left-text{
+  font-family: 'Comic-Neue';
+  font-weight: 900;
+  padding-top: 2vh;
+  width: 100%;
+   background-color: #2470a0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10vh;
+
+ }
+ .connect i{
+  font-size: 4vh;
+  margin: 1vh;
+  padding: 1vh;
+  color: #000000;
+  text-decoration: none;
+
+ }
+
+
+
+    

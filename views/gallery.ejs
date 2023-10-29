@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KolRoam Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="nav">
+      <img src="./images/KolTour2.png" alt="Logo" />
+      <button id="menu-toggle">&#9776;</button>
+      <div id="nleft">
+        <!-- <img src="KolTour-removebg-preview.png" alt=""> -->
+        <a href="/">HOME</a>
+        <a href="/places">PLACES</a>
+        <a href="/login">POST</a>
+
+        <a href="/gallery">GALLERY</a>
+        <a href="/about">ABOUT</a>
+      </div>
+    </div>
+
+    <div class="about">
+      <h4>
+        Welcome to KolRoam's Gallery.The Gallery expresses the fond of
+        photography of our users and their love for sites in kolkata. Credits
+        are provided to the photographers. To be a part of the Gallery Community
+        click <a href="/login">here.</a>
+      </h4>
+    </div>
+
+    <div class="card-container">
+      <!-- card 1 -->
+      <div class="card" data-aos="flip-up">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 1" />
+          <span>Aymaan Shabbir</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count1', 'star-popup1')"
+        >
+          <img src="images/IMG-20231024-WA0003.jpg" alt="Post Image 1" />
+          <div
+            class="like-btn"
+            id="like-btn1"
+            onclick="increaseLikes('like-count1', 'star-popup1')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup1">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count1">
+          <span id="count1">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Indian Museum , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 2 -->
+      <div class="card" data-aos="flip-left">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 2" />
+          <span>Aymaan Shabbir</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count2', 'star-popup2')"
+        >
+          <img src="images/IMG_20220929_134606.jpg" alt="Post Image 2" />
+          <div
+            class="like-btn"
+            id="like-btn2"
+            onclick="increaseLikes('like-count2', 'star-popup2')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup2">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count2">
+          <!-- Removed the onclick attribute from the like-count -->
+          <!-- <i class="ri-star-fill"></i> -->
+          <span id="count2">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Pandal , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card3 -->
+
+      <div class="card" data-aos="flip-right">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 3" />
+          <span>Sharodiya Mukherjee</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count3', 'star-popup3')"
+        >
+          <img
+            src="images/WhatsApp Image 2023-10-25 at 1.43.27 AM (1).jpeg"
+            alt="Post Image 3"
+          />
+          <div
+            class="like-btn"
+            id="like-btn3"
+            onclick="increaseLikes('like-count3', 'star-popup3')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup3">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count3">
+          <span id="count3">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Victoria Memorial , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 4 -->
+
+      <div class="card" data-aos="flip-down">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 4" />
+          <span>Sharodiya Mukherjee</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count4', 'star-popup4')"
+        >
+          <img
+            src="images/WhatsApp Image 2023-10-25 at 1.43.27 AM (3).jpeg"
+            alt="Post Image 4"
+          />
+          <div
+            class="like-btn"
+            id="like-btn4"
+            onclick="increaseLikes('like-count4', 'star-popup4')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup4">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count4">
+          <span id="count4">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Victoria Memorial , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 5 -->
+      <div class="card" data-aos="flip-up">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 5" />
+          <span>Sharodiya Mukherjee</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count5', 'star-popup5')"
+        >
+          <img
+            src="images/WhatsApp Image 2023-10-25 at 1.43.27 AM (4).jpeg"
+            alt="Post Image 5"
+          />
+          <div
+            class="like-btn"
+            id="like-btn2"
+            onclick="increaseLikes('like-count5', 'star-popup5')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup5">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count5">
+          <span id="count5">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Indian Museum , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 6 -->
+      <div class="card" data-aos="flip-left">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 6" />
+          <span>Sharodiya Mukherjee</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count6', 'star-popup6')"
+        >
+          <img
+            src="images/WhatsApp Image 2023-10-25 at 1.43.27 AM (5).jpeg"
+            alt="Post Image 2"
+          />
+          <div
+            class="like-btn"
+            id="like-btn6"
+            onclick="increaseLikes('like-count6', 'star-popup6')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup6">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count6">
+          <span id="count6">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Victoria ground , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 7 -->
+      <div class="card" data-aos="flip-left">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 7" />
+          <span>Deepan Biswas</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count7', 'star-popup7')"
+        >
+          <img
+            src="images/WhatsApp Image 2023-10-25 at 1.44.40 AM.jpeg"
+            alt="Post Image 7"
+          />
+          <div
+            class="like-btn"
+            id="like-btn7"
+            onclick="increaseLikes('like-count7', 'star-popup7')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup7">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count7">
+          <span id="count7">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Maidan, kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 8 -->
+      <div class="card" data-aos="flip-right">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 8" />
+          <span>Rashid Imran</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count8', 'star-popup8')"
+        >
+          <img
+            src="images/WhatsApp Image 2023-10-25 at 1.44.41 AM (1).jpeg"
+            alt="Post Image 2"
+          />
+          <div
+            class="like-btn"
+            id="like-btn8"
+            onclick="increaseLikes('like-count8', 'star-popup8')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup8">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count8">
+          <span id="count8">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Park Circus , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 9 -->
+      <div class="card" data-aos="flip-down">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 9" />
+          <span>Amir Ahmed</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count9', 'star-popup9')"
+        >
+          <img
+            src="images/WhatsApp Image 2023-10-25 at 1.44.41 AM (2).jpeg"
+            alt="Post Image 9"
+          />
+          <div
+            class="like-btn"
+            id="like-btn9"
+            onclick="increaseLikes('like-count9', 'star-popup9')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup9">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count9">
+          <span id="count9">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Eco Park Lake , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 10 -->
+      <div class="card" data-aos="flip-up">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 10" />
+          <span>Amir Ahmed</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count10', 'star-popup10')"
+        >
+          <img
+            src="images/WhatsApp Image 2023-10-25 at 1.44.41 AM (3).jpeg"
+            alt="Post Image 2"
+          />
+          <div
+            class="like-btn"
+            id="like-btn10"
+            onclick="increaseLikes('like-count10', 'star-popup10')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup10">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count10">
+          <span id="count10">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Barrackpore Ruins, Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 11 -->
+      <div class="card" data-aos="flip-left">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 11" />
+          <span>Faizan Anzar</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count11', 'star-popup11')"
+        >
+          <img
+            src="images/WhatsApp Image 2023-10-25 at 1.44.41 AM (4).jpeg"
+            alt="Post Image 11"
+          />
+          <div
+            class="like-btn"
+            id="like-btn11"
+            onclick="increaseLikes('like-count11', 'star-popup11')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup11">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count11">
+          <span id="count11">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>St. Paul's Cathedral , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 12 -->
+      <div class="card" data-aos="flip-right">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 12" />
+          <span>Faizan Anzar</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count12', 'star-popup12')"
+        >
+          <img
+            src="images/WhatsApp Image 2023-10-25 at 1.44.41 AM (5).jpeg"
+            alt="Post Image 12"
+          />
+          <div
+            class="like-btn"
+            id="like-btn12"
+            onclick="increaseLikes('like-count12', 'star-popup12')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup12">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count12">
+          <span id="count12">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Victoria Memorial , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 13 -->
+      <div class="card" data-aos="flip-down">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 13" />
+          <span>Ravi Singh</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count13', 'star-popup13')"
+        >
+          <img
+            src="images/WhatsApp Image 2023-10-25 at 1.44.41 AM (6).jpeg"
+            alt="Post Image 13"
+          />
+          <div
+            class="like-btn"
+            id="like-btn13"
+            onclick="increaseLikes('like-count13', 'star-popup13')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup13">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count13">
+          <span id="count13">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Victoria Memorial , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 14 -->
+      <div class="card" data-aos="flip-down">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 14" />
+          <span>Abhisek Paul</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count14', 'star-popup14')"
+        >
+          <img
+            src="images/WhatsApp Image 2023-10-25 at 1.44.41 AM.jpeg"
+            alt="Post Image 14"
+          />
+          <div
+            class="like-btn"
+            id="like-btn14"
+            onclick="increaseLikes('like-count14', 'star-popup14')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup14">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count14">
+          <span id="count14">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Victoria Memorial , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 15 -->
+      <div class="card" data-aos="flip-down">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 15" />
+          <span>Abhishek Chakraborty</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count15', 'star-popup15')"
+        >
+          <img
+            src="images/photo-1571679654681-ba01b9e1e117.jpeg"
+            alt="Post Image 15"
+          />
+          <div
+            class="like-btn"
+            id="like-btn15"
+            onclick="increaseLikes('like-count15', 'star-popup15')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup15">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count15">
+          <span id="count15">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Hoogly , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 16 -->
+      <div class="card" data-aos="zoom-in-up">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 16" />
+          <span>Subhadip Kanjilal</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count16', 'star-popup16')"
+        >
+          <img
+            src="images/photo-1603813507806-0d311a6eecd1.jpeg"
+            alt="Post Image 16"
+          />
+          <div
+            class="like-btn"
+            id="like-btn16"
+            onclick="increaseLikes('like-count16', 'star-popup16')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup16">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count16">
+          <span id="count16">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Clock Tower , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 17 -->
+      <div class="card" data-aos="zoom-in-left">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 17" />
+          <span>Aymaan Shabbir</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count17', 'star-popup17')"
+        >
+          <img src="images/IMG_20220826_144655.jpg" alt="Post Image 17" />
+          <div
+            class="like-btn"
+            id="like-btn17"
+            onclick="increaseLikes('like-count17', 'star-popup17')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup17">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count17">
+          <span id="count17">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Indian Museum , Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 18 -->
+      <div class="card" data-aos="zoom-in-right">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 18" />
+          <span>Aymaan Shabbir</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count18', 'star-popup18')"
+        >
+          <img src="images/IMG_20221102_021040.jpg" alt="Post Image 18" />
+          <div
+            class="like-btn"
+            id="like-btn18"
+            onclick="increaseLikes('like-count18', 'star-popup18')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+
+          <div class="star-popup" id="star-popup18">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count18">
+          <span id="count18">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Rabindra Sarobar, Kolkata</p>
+        </div>
+      </div>
+
+      <!-- card 19 -->
+      <div class="card" data-aos="zoom-in-right">
+        <div class="user-info">
+          <img src="images/user png.png" alt="User Image 19" />
+          <span>Akash Singh</span>
+        </div>
+
+        <div
+          class="image-container"
+          ondblclick="toggleLike(this, 'like-count19', 'star-popup19')"
+        >
+          <img
+            src="images/Screenshot_20231024_162346_WhatsApp.jpg"
+            alt="Post Image 18"
+          />
+          <div
+            class="like-btn"
+            id="like-btn19"
+            onclick="increaseLikes('like-count19', 'star-popup19')"
+          >
+            <i class="ri-star-fill"></i>
+          </div>
+          <div class="star-popup" id="star-popup19">
+            <i class="ri-star-fill" style="font-size: 20vh"></i>
+          </div>
+        </div>
+
+        <div class="like-count" id="like-count19">
+          <span id="count19">0</span>
+        </div>
+
+        <div class="text-area">
+          <p>Pandal , Kolkata</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/gallery.js"></script>
+  </body>
+</html>
